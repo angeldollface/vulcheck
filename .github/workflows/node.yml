@@ -1,0 +1,22 @@
+name: Vulcheck CI
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [15.x]
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: "Installing the example's dependencies."
+        run: cd example && npm install git+https://github.com/angeldollface/vulcheck --save-dev
+      - name: "Running the example."
+        run: node .

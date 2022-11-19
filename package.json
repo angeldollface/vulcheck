@@ -1,6 +1,6 @@
 {
   "name": "vulcheck",
-  "version": "1.6.0",
+  "version": "1.7.0",
   "description": "A package that implements my own algorithm to check the security of a password.",
   "main": "./src/index.js",
   "repository": {
@@ -12,7 +12,7 @@
     "passwords"
   ],
   "type": "module",
-  "author": "Alexander Abraham <angeldollface666@outlook.com> (http://angeldollface.art)",
+  "author": "Alexander Abraham (http://angeldollface.art)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/angeldollface/vulcheck/issues"

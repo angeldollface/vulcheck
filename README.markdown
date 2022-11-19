@@ -6,7 +6,7 @@
 
 ## ABOUT :books:
 
-Roughly a year ago, I implemented my own algorithm to check the strength of a password in Dart. ***Vulcheck*** is my port of this package to Node.js. ***Vulcheck*** is a combination of the words ***Vul***nerability and ***Check***er. You can find the original algorithm [here](https://github.com/angeldollface/securitycheck). Enjoy! :heart_on_fire:
+Roughly a year ago, I implemented my own algorithm to check the strength of a password in Dart. *Vulcheck* is my port of this package to Node.js. *Vulcheck* is a combination of the words *Vul*nerability and *Check*er. You can find the original algorithm [here](https://github.com/angeldollface/securitycheck). Enjoy! :heart_on_fire:
 
 ## USAGE :hammer:
 
@@ -14,9 +14,9 @@ Roughly a year ago, I implemented my own algorithm to check the strength of a pa
 
 The algorithm measures the distance between neighbouring characters. If the two characters being compared are of a different type, then the score is increased. If not, it is diminished. If two characters are compared and the distance is large, then the score is increased. At the end everything is totalled up.
 
-### Use ***Vulcheck*** in a Node.js project
+### Use *Vulcheck* in a Node.js project
 
-To use ***Vulcheck*** in a Node.js project, run this command in your project's root directory:
+To use *Vulcheck* in a Node.js project, run this command in your project's root directory:
 
 ```bash
 $ npm install --save-dev vulcheck
@@ -26,7 +26,7 @@ Be sure to also add the `"type":"module"` flag to your project's manifest, `pack
 
 ### APIs
 
-***Vulcheck*** offers the following functions:
+*Vulcheck* offers the following functions:
 
 - `getCharPositon(character)`: Returns the position of a character in the alphabet.
 - `getCharSpace(characterOne, characterTwo)`: Returns the distance between two alphabetic characters.
@@ -51,7 +51,7 @@ Here's a small example:
 $ npm init -y 
 ```
 
-- 2.) Install ***Vulcheck***:
+- 2.) Install *Vulcheck*:
 
 ```bash
 $ npm install --save-dev vulcheck
@@ -67,7 +67,7 @@ $ npm install --save-dev vulcheck
 
 ```js
 // index.js
-import vulcheck from 'vulcheck';
+import * as vulcheck from 'vulcheck';
 
 function main(){
   var pwd = '1969HoglinSteak';
@@ -122,6 +122,11 @@ $ node .
 
 - Updated documentation.
 - Updated, published, and uploaded under my new name.
+
+### Version 1.7.0
+
+- Fixed some administrative issues.
+- Fixed some formatting.
 
 ## NOTE :scroll:
 

@@ -1,6 +1,6 @@
 {
   "name": "vulcheck",
-  "version": "1.7.0",
+  "version": "1.8.0",
   "description": "A package that implements my own algorithm to check the security of a password.",
   "main": "./src/index.js",
   "repository": {

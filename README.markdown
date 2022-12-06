@@ -24,6 +24,14 @@ $ npm install --save-dev vulcheck
 
 Be sure to also add the `"type":"module"` flag to your project's manifest, `package.json`.
 
+### Use *Vulcheck* in a Node.js project with Typescript
+
+Add a file called `vulcheck.d.ts` to your project and put the following code inside it:
+
+```Typescript
+declare module 'vulcheck';
+```
+
 ### APIs
 
 *Vulcheck* offers the following functions:
@@ -127,6 +135,11 @@ $ node .
 
 - Fixed some administrative issues.
 - Fixed some formatting.
+
+### Version 1.8.0
+
+- Updated `export` statement.
+- Updated documentation for Typescript.
 
 ## NOTE :scroll:
 

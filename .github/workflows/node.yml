@@ -1,22 +1,13 @@
-name: Vulcheck CI
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+name: "VULCHECK CI"
+on: [push, pull_request]
 jobs:
   build:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [15.x]
     steps:
-      - uses: actions/checkout@v3
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
+      - uses: actions/checkout@master
+      - name: Setup Deno
+        uses: denolib/setup-deno@master
         with:
-          node-version: ${{ matrix.node-version }}
-      - name: "Installing the example's dependencies."
-        run: cd example && npm install git+https://github.com/angeldollface/vulcheck --save-dev
-      - name: "Running the example."
-        run: node .
+          deno-version: 1.43.3
+      - name: "Run tests."
+        run: deno test

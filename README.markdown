@@ -26,8 +26,8 @@ The algorithm measures the distance between neighbouring characters. If the two 
     - `normChar`: Character is an alphabetic character.
     - `specialChar`: Character is a special symbol.
 - `isInt(expr)`: Returns a boolean telling you whether `expr` is an integer or not.
-- `passwordStrength(password)`: Returns a score that says how secure your password is.
-- `isSecure(password)`: Returns a boolean telling you if your password is secure or not. If the score is larger than eight, then it will return `true`.
+- `passwordStrength(password, securityWeight, arabicCharacterWeight, specialCharacterWeight)`: Returns a score that says how secure your password is.
+- `isSecure(password, specialCharacterWeight, arabicCharacterWeight, securityWeight, cutOff)`: Returns a boolean telling you whether your password is secure or not. If the score is larger than `cutOff`, then it will return `true`.
 - `generatePassword(length)`: Returns a password as a string of the length supplied.
 
 ### Example
@@ -36,7 +36,7 @@ The algorithm measures the distance between neighbouring characters. If the two 
 - 2.) Import *Vulcheck* from Deno's module repository:
 
 ```Typescript
-import * as vulcheck from 'https://deno.land/x/zeppo/mod.ts';
+import * as vulcheck from 'https://deno.land/x/vulcheck/mod.ts';
 ```
 
 - 3.) You can now use any of the function signatures above by prepending `vulcheck.`:
@@ -71,7 +71,7 @@ deno run your_script.ts
 
 ### Version 1.4.0
 
-- Fixed some ciritical issues.
+- Fixed some critical issues.
 - Updated documentation.
 
 ### Version 1.5.0
@@ -105,4 +105,4 @@ deno run your_script.ts
 ## NOTE :scroll:
 
 - *Vulcheck :lock: :ribbon:* by Alexander Abraham :black_heart: a.k.a. *"Angel Dollface" :dolls: :ribbon:*
-- Licensed under the DSL v1.
+- Licensed under the [DSL v1](https://github.com/angeldollface/doll-software-license).

@@ -7,7 +7,7 @@ Licensed under the DSL v1.
 'use strict';
 
 // This method returns the position of a
-// given character as an vareger.
+// given character as an integer.
 export function getCharPositon(character: string): number {
     let result: number = 0;
     const labvar: string = character.toLowerCase();
@@ -25,13 +25,13 @@ export function getCharPositon(character: string): number {
 }
   
 // This method returns the space between two characters
-// as an vareger.
+// as an integer.
 export function getCharSpace(characterOne: string, characterTwo: string): number {
    return getCharPositon(characterTwo) - getCharPositon(characterOne);
 }
   
 // This method returns the space between two numbers
-// as an vareger.
+// as an integer.
 export function getNumberSpace(numberOne: number, numberTwo: number): number {
     return numberTwo - numberOne;
 }
@@ -62,8 +62,7 @@ export function isInt(expr: string): boolean{
 }
 
 // This method returns the strength
-// of a password on a scale from
-// one to ten as an vareger.
+// of a password on a scale as an integer.
 export function passwordStrength(
   password: string,
   securityWeight: number,
@@ -131,7 +130,7 @@ export function isSecure(
 }
 
 /// This method generates a password of
-/// the length specified and returnss it.
+/// the length specified and returns it.
 export function generatePassword(length: number) {
   const alphabet: Array<string> = 'abcdefghijklmnopqrstuvwxyz1234567890@_;.:'.split('');
   const result: Array<string> = [];

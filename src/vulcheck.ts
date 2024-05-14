@@ -131,7 +131,7 @@ export function isSecure(
 
 /// This method generates a password of
 /// the length specified and returns it.
-export function generatePassword(length: number) {
+export function generatePassword(length: number): string {
   const alphabet: Array<string> = 'abcdefghijklmnopqrstuvwxyz1234567890@_;.:'.split('');
   const result: Array<string> = [];
   for (let i: number = 0; i < length; i++) {
